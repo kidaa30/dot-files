@@ -1,6 +1,20 @@
 # path
 
-export PATH=~/bin:${PATH}
+PATH=~/bin:${PATH}
+
+for f in ~/bin/*; do
+
+    # add any sub-dirs
+
+    if [[ -d $f ]]; then
+
+        PATH=$f:${PATH}
+
+    fi
+
+done
+
+export PATH
 
 # test if shell interactive
 
@@ -22,10 +36,8 @@ export EDITOR=vim
 
 # ccache
 
-export PATH=~/bin/ccache:${PATH}
-
-export CCACHE_DIR="/var/tmp/ccache/${USER}"
-export CCACHE_SIZE="8G"
+export CCACHE_DIR="/var/ccache/${USER}"
+export CCACHE_SIZE="4G"
 export CCACHE_COMPRESS="1"
 
 # aliases
