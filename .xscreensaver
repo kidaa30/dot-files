@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.26 for jason on Sun Apr 27 21:20:16 2014.
+# Written by xscreensaver-demo 5.26 for jason on Sat Apr 19 11:31:47 2014.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -79,7 +79,7 @@ programs:								      \
 - GL: 				moebius -root				    \n\
 				moire -root				    \n\
 - GL: 				morph3d -root				    \n\
-				mountain -root -delay 10000 -ncolors 1	    \n\
+				mountain -root -delay 10000 -ncolors 180    \n\
 				munch -root				    \n\
 				penrose -root				    \n\
 - GL: 				pipes -root				    \n\
