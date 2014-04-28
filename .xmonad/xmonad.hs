@@ -11,21 +11,21 @@ main = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/jason/.xmobarrc"
   xmonad $ defaultConfig
     { normalBorderColor = "#222222"
-    , focusedBorderColor = "#EF2929"
+    , focusedBorderColor = "#657b83"
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
     , logHook = dynamicLogWithPP $ xmobarPP
       { ppOutput = hPutStrLn xmproc
-      , ppCurrent = xmobarColor "red" "" . wrap "[" "]"
-      , ppTitle = xmobarColor "gray" "" . shorten 50
-      , ppUrgent= xmobarColor "red" "black"
+      , ppCurrent = xmobarColor "#d33682" "" . wrap "[" "]"
+      , ppTitle = xmobarColor "#c0c0c0" "" . shorten 50
+      , ppUrgent= xmobarColor "#dc322f" ""
       , ppVisible = wrap "(" ")"
       }
-    , terminal = "/usr/bin/uxterm -fg \\#585858 -bg \\#000000 -tn xterm-256color"
+    , terminal = "/usr/bin/uxterm -tn xterm-256color"
     } `additionalKeys`
     [    ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
        , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig
-           { bgColor = "#000000"
+           { bgColor = "#1b1b1b"
            , fgColor = "#585858"
            , borderColor = "#222222"
            }
