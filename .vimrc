@@ -18,6 +18,9 @@ Plugin 'rking/ag.vim'
 
 filetype plugin indent on
 
+" vim
+set nocompatible
+
 set smartindent
 set shiftwidth=2
 set softtabstop=2
@@ -30,15 +33,21 @@ set number
 syntax on
 filetype indent on
 
-map <C-K> :pyf ~/.vim/python/clang-format.py<CR>
-imap <C-K> <ESC>:pyf ~/.vim/python/clang-format.py<CR>i
-nmap <silent> <F5> :call ClangCheck()<CR><CR>
+" airline
+let g:airline#extensions#tabline#enabled = 1
 
-if has('cscope')
-    set cscopetag cscopeverbose
+" clang-format
+map <c-k> :pyf ~/.vim/python/clang-format.py<cr>
+imap <c-k> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
+nmap <F5> :%pyf ~/.vim/python/clang-format.py<cr>
 
-    if has('quickfix')
-        set cscopequickfix=s-,c-,d-,i-,t-,e-
-    endif
+" clang-check
+nmap <silent> <F10> :call ClangCheck()<cr><cr>
 
-endif
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" fugitive
+autocmd QuickFixCmdPost *grep* cwindow
