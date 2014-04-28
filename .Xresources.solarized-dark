@@ -32,8 +32,8 @@
 !
 ! URxvt*background:            S_base03
 
-*background:              S_base03
-*foreground:              S_base0
+*background:              #1b1b1b
+*foreground:              S_base00
 *fading:                  40
 *fadeColor:               S_base03
 *cursorColor:             S_base1
