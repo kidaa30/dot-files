@@ -1,3 +1,8 @@
+" theme
+colorscheme solarized
+let g:solarized_termcolors=256
+set background=dark
+
 set smartindent
 set shiftwidth=4
 set softtabstop=4
