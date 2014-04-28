@@ -3,6 +3,21 @@ colorscheme solarized
 let g:solarized_termcolors=256
 set background=dark
 
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'rking/ag.vim'
+
+filetype plugin indent on
+
 set smartindent
 set shiftwidth=4
 set softtabstop=4
