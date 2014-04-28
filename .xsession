@@ -1,5 +1,5 @@
 #!/bin/sh
-/usr/bin/xsri --color=\#1c1c1c
+/usr/bin/xsri --color=\#1b1b1b
 
 # start synergy client
 /usr/bin/sudo /usr/bin/killall synergys
