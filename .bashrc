@@ -34,12 +34,18 @@ export LC_ALL="en_US.UTF-8"
 
 export EDITOR=vim
 
+# compiler
+
+export CC="clang"
+export CXX="clang++"
+
 # ccache
 
 if [[ -d /var/ccache/${USER} ]]; then
 
     export CCACHE_DIR="/var/ccache/${USER}"
     export CCACHE_SIZE="4G"
+    export CCACHE_CPP2="1"
     export CCACHE_COMPRESS="1"
 
 fi
