@@ -34,11 +34,11 @@ syntax on
 filetype indent on
 
 " airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 
 " clang-format
-map <c-k> :pyf ~/.vim/python/clang-format.py<cr>
-imap <c-k> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
+map <c-f> :pyf ~/.vim/python/clang-format.py<cr>
+imap <c-f> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
 nmap <F5> :%pyf ~/.vim/python/clang-format.py<cr>
 
 " clang-check
