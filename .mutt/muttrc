@@ -4,10 +4,19 @@ source ~/.mutt/gpg.muttrc
 
 set realname="Jason Schulz"
 
+alternates schulz.j@gmail.com jason@schulz.name
+
+set askcc
+set askbcc
+set reply_to
+set reverse_name
+set edit_headers
+
 set send_charset="utf-8"
 set assumed_charset="iso-8859-1"
 
-set editor="vim -c 'set syntax=mail ft=mail tw=0 enc=utf-8 spell spelllang=en'"
+set editor="vim -c 'set syntax=mail filetype=mail spell spelllang=en nonumber textwidth=0'"
+set query_command="/usr/bin/goobook query '%s'"
 
 set timeout=300
 set mail_check=300
@@ -32,6 +41,13 @@ set pager_index_lines=32
 
 set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
 
+set sidebar_width = 48
+set sidebar_delim = '  |'
+set sidebar_visible = yes
+
+set status_chars = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
 hdr_order Date From To Cc
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
@@ -39,6 +55,11 @@ ignore "DKIM-Signature:"
 
 alternative_order text/plain text/html *
 auto_view text/html application/pdf application/msword
+
+# sidebar
+bind index,pager    <down>  sidebar-next
+bind index,pager    <up>    sidebar-prev
+bind index,pager    <right> sidebar-open
 
 # gmail
 
@@ -52,7 +73,12 @@ macro index,pager   gs  "<change-folder>=[Gmail]/Starred<enter>"                
 macro index,pager   gd  "<change-folder>=[Gmail]/Drafts<enter>"                                                     "go to drafts"
 macro index,pager   S   "<save-message>=[Gmail]/Spam<enter>"                                                        "mark as spam"
 
-bind index,pager    G   imap-fetch-mail
+bind index,pager    G       imap-fetch-mail
+bind index          R       group-reply
+
+# contacts
+
+bind editor         <tab>   complete-query
 
 # labels
 
@@ -76,5 +102,18 @@ set postponed = "=[Gmail]/Drafts"
 
 unset record
 
-mailboxes "=INBOX"
+mailboxes =INBOX \
+          =[Gmail]/Drafts \
+          =[Gmail]/Sent\ Mail \
+          =[Gmail]/Trash \
+          =blog \
+          =bugs \
+          =family \
+          =github \
+          =google \
+          =kernel \
+          =personal \
+          =ulz\ group \
+          =dns\ register \
+          =hosting\ provider \
 
