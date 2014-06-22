@@ -1,5 +1,5 @@
 
-source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/mutt-colors-zenburn-256.muttrc
 source ~/.mutt/gpg.muttrc
 
 set realname="Jason Schulz"
