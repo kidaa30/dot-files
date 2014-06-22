@@ -13,10 +13,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'rking/ag.vim'
+Plugin 'uxcn/vim-x2x'
 
 filetype plugin indent on
 
@@ -72,3 +74,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+
+" x2x
+xmap <leader>b  <plug>x2b
+nmap <leader>b  <plug>x2b
+xmap <leader>o  <plug>x2o
+nmap <leader>o  <plug>x2o
+xmap <leader>d  <plug>x2d
+nmap <leader>d  <plug>x2d
+xmap <leader>h  <plug>x2h
+nmap <leader>h  <plug>x2h
