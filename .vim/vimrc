@@ -13,6 +13,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
@@ -50,6 +51,7 @@ set pastetoggle=<F2>
 set incsearch
 
 set number
+set relativenumber
 syntax on
 
 " airline
