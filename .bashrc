@@ -45,6 +45,10 @@ export LC_ALL="en_US.UTF-8"
 
 export EDITOR=vim
 
+# gnupg
+
+export GPG_TTY=$(/usr/bin/tty)
+
 # compiler
 
 export CC="clang"
