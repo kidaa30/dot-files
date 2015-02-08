@@ -39,7 +39,7 @@ set auto_tag = yes
 set menu_scroll=yes
 set pager_index_lines=32
 
-set index_format="%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?(%.20Y) ?%s"
+set index_format="%[%m-%d (%H:%M)] %Z %-15.15L (%4l) %s"
 
 set sidebar_width = 48
 set sidebar_delim = '  |'
