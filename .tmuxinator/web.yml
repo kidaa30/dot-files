@@ -1,0 +1,10 @@
+# ~/.tmuxinator/web.yml
+
+name: web
+root: ~/
+
+windows:
+  - w3m:
+      layout: tiled
+      panes:
+        - w3m -B
