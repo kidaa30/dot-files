@@ -12,7 +12,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                            ["-t", "<timeleft>"] 10
 		            , Run CpuFreq ["-t","<cpu0> <cpu1> <cpu2> <cpu3>","-L","0","-H","2","-l","#657b83","-n","#657b83","-h","#859900"] 50
                     , Run CoreTemp ["-t","<core0> <core1> <core2> <core3>","-L","40","-H","60","-l","#657b83","-n","#657b83","-h","#859900"] 50 
-                    , Run Date "%Y/%m/%d <fc=#d33682>%H:%M</fc>" "date" 10
+                    , Run Date "%Y/%m/%d <fc=#268bd2>%H:%M</fc>" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
