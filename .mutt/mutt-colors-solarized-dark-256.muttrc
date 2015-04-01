@@ -104,7 +104,7 @@ color signature color240 color234
 color bold color235 color234
 color underline color235 color234
 color normal color244 color234
-#
+
 color body color245 color234 "[;:][-o][)/(|]" # emoticons
 color body color245 color234 "[;:][)(|]" # emoticons
 color body color245 color234 "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\

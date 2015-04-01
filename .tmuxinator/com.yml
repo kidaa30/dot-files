@@ -5,8 +5,8 @@ root: ~/
 
 windows:
   - main:
-      layout: b646,319x81,0,0[319x40,0,0,0,319x40,0,41{159x40,0,41,1,159x40,160,41,2}]
+      layout: e87b,319x81,0,0{159x81,0,0,37,159x81,160,0[159x40,160,0,40,159x40,160,41,41]}
       panes:
-        - mutt
-        - gc-watch
-        - weechat
+      - mutt
+      - export TERM=screen-256color; weechat
+      - gc-watch --width 21

@@ -8,17 +8,21 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Plugin 'bling/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'rking/ag.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'vim-scripts/TaskList.vim'
 Plugin 'uxcn/vim-x2x'
 
 filetype plugin indent on
@@ -54,7 +58,11 @@ set number
 set relativenumber
 syntax on
 
+" maps
+nnoremap <silent> <c-h> :nohlsearch <cr><c-h>
+
 " airline
+let g:airline_theme='lucius'
 let g:airline#extensions#tabline#enabled=1
 
 " youcompleteme

@@ -1,0 +1,55 @@
+
+# general
+color normal     default  default
+color error      color125 default
+color markers    color142 default
+color tilde      color058 default
+color status     default  default
+
+# index 
+color indicator  color024 default
+color tree       color058 default
+color index      default  default ~A
+color index      color007 default ~N
+color index      default  default ~O
+color index      color094 default ~F
+color index      color124 default ~D
+color index      color058 default "~T" # tagged messages
+
+# header 
+color hdrdefault default  default
+color header     color024 default "^Subject"
+
+# gpg 
+color body       default  default "^gpg: Good signature.*"
+color body       color115 color236 "^gpg: BAD signature.*"
+color body       color024 default "^gpg: Can't check signature.*"
+color body       color024 default "^-----BEGIN PGP SIGNED MESSAGE-----"
+color body       color024 default "^-----BEGIN PGP SIGNATURE-----"
+color body       color024 default "^-----END PGP SIGNED MESSAGE-----"
+color body       color024 default "^-----END PGP SIGNATURE-----"
+color body       color024 default "^Version: GnuPG.*"
+color body       color024 default "^Comment: .*"
+
+# url, email, and web 
+color body       color024 default "(finger|ftp|http|https|news|telnet)://[^ >]*"
+color body       color024 default "<URL:[^ ]*>"
+color body       color024 default "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+color body       color024 default "mailto: *[^ ]+\(\\i?subject=[^ ]+\)?"
+color body       color024 default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+# misc body 
+color attachment color024 default #Add-ons to the message
+color signature  color125 default
+
+# quote levels
+color quoted     color108 default
+color quoted1    color116 default
+color quoted2    color247 default
+color quoted3    color108 default
+color quoted4    color116 default
+color quoted5    color247 default
+color quoted6    color108 default
+color quoted7    color116 default
+color quoted8    color247 default
+color quoted9    color108 default

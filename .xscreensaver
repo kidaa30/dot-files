@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.32 for jason on Mon Mar 16 19:44:50 2015.
+# Written by xscreensaver-demo 5.32 for jason on Sat Mar 28 23:43:33 2015.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	209
+selected:	34
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -79,7 +79,7 @@ programs:								      \
 - GL: 				moebius -root				    \n\
 				moire -root				    \n\
 - GL: 				morph3d -root				    \n\
-				mountain -root -delay 10000 -ncolors 180    \n\
+				mountain -root -delay 8850 -ncolors 1	    \n\
 				munch -root				    \n\
 				penrose -root				    \n\
 - GL: 				pipes -root				    \n\
@@ -155,7 +155,7 @@ programs:								      \
 				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
 				zoom -root				    \n\
-				anemone -root				    \n\
+				anemone -root -width 4			    \n\
 				apollonian -root			    \n\
 - GL: 				boxed -root				    \n\
 - GL: 				cubenetic -root				    \n\
@@ -258,7 +258,8 @@ programs:								      \
   GL: 				projectiveplane -root			    \n\
 				tessellimage -root			    \n\
   GL: 				winduprobot -root			    \n\
-				binaryring -root			    \n\
+				binaryring -root -growth-delay 46018	      \
+				  -ring-radius 294 -particles-number 500    \n\
   GL: 				cityflow -root -delay 0 -count 155 -skew      \
 				  0 -wave-speed 5 -wave-radius 54 -waves      \
 				  1 -wireframe				    \n\

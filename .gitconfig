@@ -7,3 +7,5 @@
 	email = jason@schulz.name
 [color]
 	ui = true
+[web]
+	browser = /usr/bin/w3m

@@ -25,6 +25,8 @@ for f in ~/bin/*; do
 
 done
 
+PATH="${PATH}:/opt/eclipse"
+
 export PATH
 
 # test if shell interactive
@@ -65,9 +67,25 @@ if [[ -d /dev/hdd ]]; then
 
 fi
 
+# git
+
+export GIT=~/development/git
+
+# rtorrent
+
+/bin/stty start undef
+/bin/stty stop undef
+
 # aliases
+
+alias diff="colordiff"
 
 alias ls="ls -hF --color=tty"
 alias la="ls -A"
 alias ll="ls -l"
+
+alias kk="knock"
+alias rd="rdesktop"
+alias nb="newsbeuter"
+alias wb="w3m -B"
 
