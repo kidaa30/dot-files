@@ -23,7 +23,7 @@ main = do
       , ppUrgent= xmobarColor "#dc322f" ""
       , ppVisible = wrap "(" ")"
       }
-    , terminal = "/usr/bin/uxterm -tn xterm-256color /usr/bin/tmux"
+    , terminal = "/usr/bin/uxterm /usr/bin/tmux"
     } `additionalKeys`
     [    ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
        , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig
@@ -32,7 +32,7 @@ main = do
            , borderColor = "#222222"
            }
          )
-       , ((mod1Mask .|. shiftMask, xK_m), prompt "/usr/bin/uxterm -tn xterm-256color -e mux" defaultXPConfig
+       , ((mod1Mask .|. shiftMask, xK_m), prompt "/usr/bin/uxterm -e mux" defaultXPConfig
            { bgColor = "#1b1b1b"
            , fgColor = "#585858"
            , borderColor = "#222222"

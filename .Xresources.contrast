@@ -23,6 +23,7 @@
 
 ! xterm
 
+xterm*termName:                xterm-256color
 xterm*background:              S_darkgray
 xterm*foreground:              S_base00
 xterm*fading:                  40
