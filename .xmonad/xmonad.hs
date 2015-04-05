@@ -25,7 +25,8 @@ main = do
       }
     , terminal = "/usr/bin/uxterm /usr/bin/tmux"
     } `additionalKeys`
-    [    ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
+    [    ((mod1Mask .|. shiftMask, xK_BackSpace), spawn "/usr/bin/uxterm")
+       , ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
        , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig
            { bgColor = "#1b1b1b"
            , fgColor = "#585858"
