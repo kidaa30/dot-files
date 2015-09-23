@@ -4,9 +4,8 @@ name: com
 root: ~/
 
 windows:
-  - main:
-      layout: e87b,319x81,0,0{159x81,0,0,37,159x81,160,0[159x40,160,0,40,159x40,160,41,41]}
+  - com:
+      layout: even-horizontal
       panes:
-      - mutt
-      - export TERM=screen-256color; weechat
-      - gc-watch --width 21
+        - mutt
+        - weechat
