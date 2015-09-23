@@ -18,7 +18,7 @@ main = do
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
     , logHook = dynamicLogWithPP $ xmobarPP
       { ppOutput = hPutStrLn xmproc
-      , ppCurrent = xmobarColor "#859900" "" . wrap "[" "]"
+      , ppCurrent = xmobarColor "#b71fb5" "" . wrap "[" "]"
       , ppTitle = xmobarColor "#c0c0c0" "" . shorten 50
       , ppUrgent= xmobarColor "#dc322f" ""
       , ppVisible = wrap "(" ")"
@@ -29,18 +29,18 @@ main = do
        , ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
        , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig
            { bgColor = "#1b1b1b"
-           , fgColor = "#585858"
+           , fgColor = "#657b83"
            , borderColor = "#222222"
            }
          )
        , ((mod1Mask .|. shiftMask, xK_m), prompt "/usr/bin/uxterm -e mux" defaultXPConfig
            { bgColor = "#1b1b1b"
-           , fgColor = "#585858"
+           , fgColor = "#657b83"
            , borderColor = "#222222"
            })
        , ((mod1Mask .|. shiftMask, xK_r), prompt "/bin/sh rdesktop" defaultXPConfig
            { bgColor = "#1b1b1b"
-           , fgColor = "#585858"
+           , fgColor = "#657b83"
            , borderColor = "#222222"
            })
     ] 
