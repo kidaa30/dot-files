@@ -25,9 +25,11 @@ for f in ~/bin/*; do
 
 done
 
-PATH="${PATH}:/opt/eclipse"
+PATH=${PATH}:/opt/eclipse
+MANPATH=${MANPATH}:~/share/man
 
 export PATH
+export MANPATH
 
 # test if shell interactive
 
@@ -45,7 +47,7 @@ export LC_ALL="en_US.UTF-8"
 
 # general
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # gnupg
 
@@ -89,3 +91,6 @@ alias rd="rdesktop"
 alias nb="newsbeuter"
 alias wb="w3m -B"
 
+alias pm="pm -f"
+alias cpm="cpm -f"
+alias upm="upm -f"
