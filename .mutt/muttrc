@@ -74,7 +74,8 @@ macro index,pager   gd  "<change-folder>=[Gmail]/Drafts<enter>"                 
 macro index,pager   S   "<save-message>=[Gmail]/Spam<enter>"                                                        "mark as spam"
 
 bind index,pager    G       imap-fetch-mail
-bind index          R       group-reply
+bind index,pager    r       group-reply
+bind index,pager    R       reply
 
 # google contacts
 
