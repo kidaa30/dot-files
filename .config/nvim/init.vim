@@ -1,11 +1,10 @@
 " theme
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme zenburn
 set background=dark
 
 " vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=/home/jason/.config/nvim/bundle/vundle
 call vundle#rc()
 
 Plugin 'bling/vim-airline'
@@ -19,16 +18,14 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
 Plugin 'rking/ag.vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'vim-scripts/TaskList.vim'
-Plugin 'yuratomo/w3m.vim'
 Plugin 'uxcn/vim-x2x'
+Plugin 'simnalamburt/vim-mundo'
+Plugin 'christoomey/vim-tmux-navigator'
 
 filetype plugin indent on
 
-" vim
+" nvim
 set nocompatible
 set encoding=utf-8
 
@@ -59,15 +56,21 @@ set number
 set relativenumber
 syntax on
 
-" maps
-nnoremap <silent> <c-h> :nohlsearch <cr><c-h>
-
-inoremap <silent> <f3> <c-o>:set nopaste<cr><c-r>+
-inoremap <silent> <f4> <c-o>:set paste<cr><c-r>+<c-o>:set nopaste<cr>
-
 " airline
 let g:airline_theme='lucius'
 let g:airline#extensions#tabline#enabled=1
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-y>"
+let g:UltiSnipsJumpForwardTrigger="<c-i>"
+let g:UltiSnipsJumpBackwardTrigger="<c-o>"
+
+"search
+nnoremap <silent> <leader><c-l> :set invhlsearch<cr>
+
+" paste
+inoremap <silent> <f3> <c-o>:set nopaste<cr><c-r>+
+inoremap <silent> <f4> <c-o>:set paste<cr><c-r>+<c-o>:set nopaste<cr>
 
 " eclim
 let g:EclimCompletionMethod = 'omnifunc'
@@ -77,20 +80,18 @@ nmap <leader>f :YcmCompleter GoToDefinition<cr>
 nmap <leader>c :YcmCompleter GoToDeclaration<cr>
 
 " clang-format
-map <c-f> :pyf ~/.vim/python/clang-format.py<cr>
-imap <c-f> <esc>:pyf ~/.vim/python/clang-format.py<cr>i
-nmap <F5> :%pyf ~/.vim/python/clang-format.py<cr>
+noremap  <leader>f           :pyf ~/.config/nvim/python/clang-format.py<cr>
+inoremap <leader>f      <c-o>:pyf ~/.config/nvim/python/clang-format.py<cr>
+nnoremap <leader>ff          :%pyf ~/.config/nvim/python/clang-format.py<cr>
 
-" clang-check
-nmap <silent> <F10> :call ClangCheck()<cr><cr>
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" gundo
+nnoremap <leader>g :GundoToggle<cr>
 
 " fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+
+" tasks
+nnoremap <leader>t :Ag \(FIXME\)\\|\(TODO\)<cr>
 
 " x2x
 xmap <leader>b  <plug>x2b
