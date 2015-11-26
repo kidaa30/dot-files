@@ -1,23 +1,19 @@
 #!/bin/sh
 
-# FIXME
-/usr/bin/xhost +localhost
-
-/usr/bin/xsri --color=\#1b1b1b
+# background
+/usr/bin/xsri --color=\#373737
 
 # start xscreensaver
 xscreensaver -no-splash &
 
+#start urxvtd
+/usr/bin/urxvtd -q -f -o
+
 # start synergy client
-#/usr/bin/sudo /usr/bin/killall synergys
-#/usr/bin/sleep 1
-#/usr/bin/synergys 
+#/usr/bin/synergys
 
 # start pulseaudio
-/usr/bin/pulseaudio --start --log-target=syslog
-
-# start gc-remind
-/usr/bin/nohup ~/bin/gc/gc-remind &>>/dev/null & 
+/usr/bin/start-pulseaudio-x11 --start --log-target=syslog
 
 /usr/bin/xmonad
 
@@ -29,6 +25,3 @@ xscreensaver -no-splash &
 
 # stop xscreensaver
 /usr/bin/xscreensaver-command -exit
-
-# stop gc-remind
-/usr/bin/pkill gc-remind
