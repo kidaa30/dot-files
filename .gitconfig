@@ -1,7 +1,7 @@
 [core]
-	editor = vim
+	editor = nvim
 [merge]
-	tool = vimdiff
+	tool = nvim -d
 [user]
 	name = Jason Schulz
 	email = jason@schulz.name
