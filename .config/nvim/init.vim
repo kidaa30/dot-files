@@ -76,7 +76,7 @@ inoremap <silent> <f4> <c-o>:set paste<cr><c-r>+<c-o>:set nopaste<cr>
 let g:EclimCompletionMethod = 'omnifunc'
 
 " youcompleteme
-nmap <leader>f :YcmCompleter GoToDefinition<cr>
+nmap <leader>d :YcmCompleter GoToDefinition<cr>
 nmap <leader>c :YcmCompleter GoToDeclaration<cr>
 
 " clang-format
