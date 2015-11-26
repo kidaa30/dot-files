@@ -1,40 +1,24 @@
 # path
 
-declare -A PHASH
+for f in ~/bin ~/bin/*; do
 
-PRE="${IFS}"; IFS=$\:; DS=( ${PATH} ); IFS="${PRE}";
+  if [[ -d $f && \
+        ! $PATH =~ $f:.* && \
+        ! $PATH =~ .*:$f:.* && \
+        ! $PATH =~ .*:$f ]]; then 
+  
+    PATH=$f:${PATH}
 
-for d in ${DS[@]}; do
-    PHASH[$d]=1
-done
-
-if [[ -z ${PHASH[~/bin]} ]]; then
-    PATH=~/bin:${PATH}
-fi
-
-for f in ~/bin/*; do
-
-    # add any sub-dirs
-
-    if [[ -z ${PHASH[$f]} && -d $f ]]; then
-
-        PHASH[$f]=1
-        PATH=$f:${PATH}
-
-    fi
+  fi
 
 done
 
-PATH=${PATH}:/opt/eclipse
-MANPATH=${MANPATH}:~/share/man
-
-export PATH
-export MANPATH
+export MANPATH=${MANPATH%%:/home/${USER}/share/man}:/home/${USER}/share/man
 
 # test if shell interactive
 
 if [[ $- != *i* ]] ; then
-	return
+    return
 fi
 
 # shell optional behavior
@@ -58,39 +42,30 @@ export GPG_TTY=$(/usr/bin/tty)
 export CC="clang"
 export CXX="clang++"
 
-# ccache
+# development
 
-if [[ -d /dev/hdd ]]; then
-
-    export CCACHE_DIR="/var/ccache/${USER}"
-    export CCACHE_SIZE="4G"
-    export CCACHE_CPP2="1"
-    export CCACHE_COMPRESS="1"
-
-fi
-
-# git
-
-export GIT=~/development/git
-
-# rtorrent
-
-/bin/stty start undef
-/bin/stty stop undef
+export hg=~/development/hg
+export git=~/development/git
+export svn=~/development/svn
 
 # aliases
 
-alias diff="colordiff"
+alias aga="ag -a"
+
+alias cdh="cd $hg"
+alias cdg="cd $git"
+alias cds="cd $svn"
+alias cdd="cd ~/development"
+
 
 alias ls="ls -hF --color=tty"
 alias la="ls -A"
 alias ll="ls -l"
 
-alias kk="knock"
-alias rd="rdesktop"
-alias nb="newsbeuter"
-alias wb="w3m -B"
-
 alias pm="pm -f"
 alias cpm="cpm -f"
 alias upm="upm -f"
+
+alias diff="colordiff"
+alias hostname="hostname --fqdn"
+
