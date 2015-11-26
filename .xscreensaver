@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.32 for jason on Sat Mar 28 23:43:33 2015.
+# Written by xscreensaver-demo 5.34 for jason on Wed Nov 25 21:43:29 2015.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	34
+selected:	118
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -165,7 +165,7 @@ programs:								      \
 - GL: 				flurry -root				    \n\
 - GL: 				glblur -root				    \n\
 - GL: 				glsnake -root				    \n\
-				halftone -root -delay 20000		    \n\
+				halftone -root -delay 100000		    \n\
 - GL: 				juggler3d -root				    \n\
 - GL: 				lavalite -root				    \n\
 -				polyominoes -root			    \n\
@@ -264,6 +264,9 @@ programs:								      \
 				  0 -wave-speed 5 -wave-radius 54 -waves      \
 				  1 -wireframe				    \n\
   GL: 				geodesicgears -root			    \n\
+  GL: 				romanboy -root				    \n\
+  GL: 				splitflap -root				    \n\
+				testx11 -root				    \n\
 
 
 pointerPollTime:    0:00:05
