@@ -1,3 +1,5 @@
+remove Lock = Caps_Lock
+
 keycode   8 =
 keycode   9 = Caps_Lock NoSymbol Caps_Lock
 keycode  10 = 1 exclam 1 exclam
@@ -248,4 +250,4 @@ keycode 254 =
 keycode 255 =
 keycode 474 = XF86TouchpadToggle NoSymbol XF86TouchpadToggle
 
-remove lock = Escape
+remove Lock = Escape
